@@ -110,12 +110,33 @@ img{
 }
 /* ====== HERO ====== */
 .section-hero{
-    background-color: #2e2f42;
-    max-width: 1440px;
+    position: relative;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-widht:1440px;
     margin-left: auto;
     margin-right: auto;
     padding:188px 0;
 }
+.background-hero{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(46, 47, 66, 0.7);
+}
+.background-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.7);
+    z-index: 1;
+  }
 .hero-container{
     flex-direction: column;
     align-items: center;
@@ -123,6 +144,8 @@ img{
 }
 
 .section-hero-text{
+    position: relative;
+    z-index: 2;
     font-size: 56px;
     line-height: 1.07;
     margin-left: auto;
@@ -134,6 +157,8 @@ img{
     color: #ffffff;
 }
 .section-hero-button{
+    position: relative;
+    z-index: 2;
     display:block;
     background-color: #4d5ae5;
     border: none;
@@ -194,6 +219,15 @@ img{
     letter-spacing: 0.02em;
     color: #434455;
 }
+.benefits-icons-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background: #f4f4fd;
+}
 /* ====== TEAM ====== */
 .section-team{
     background: #f4f4fd;
@@ -242,6 +276,36 @@ img{
     text-align: center;
     color: #434455;  
 }
+.social-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width:232px;
+}
+.social-list-item{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color:#4d5ae5;
+    padding: 12px;
+}
+.social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.social-list-icon {
+    width: 20px; /* Розмір іконки */
+    height: 20px; /* Розмір іконки */
+    fill: #f4f4fd; /* Колір іконки */
+}
+.social-list-link:hover,
+.social-list-link:focus{
+    stroke:404BBF;
+}
 /* ====== PORTFOLIO ====== */
 .portfolio-title{
     min-width:218px;
@@ -265,7 +329,34 @@ img{
 
 }
 .portfolio-item{
+    position: relative;
     width: calc((100% - 48px) / 3);
+    overflow: hidden;
+}
+
+.cashless-payment-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:300px;
+    background-color: #404bbf;
+    overflow: auto; 
+    transform: translateY(145%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cashless-payment-text{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    transform: translate(32px,40px);
+    width: 296px;
+}
+.portfolio-item:hover .cashless-payment-overlay{
+    transform: translateY(0%);
 }
 .app-info{
     padding: 32px 16px;
@@ -289,6 +380,8 @@ img{
 }
 /* ====== FOOTER ====== */
 .page-footer{
+    display:flex;
+    justify-content: flex-start;
     background: #2e2f42;
     padding: 100px 0;
 }
@@ -316,4 +409,9 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+.footer-social-media{
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 16px;
 }
