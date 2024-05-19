@@ -123,7 +123,7 @@ img {
     color: #404bbf;
 }
 
-.menu-item-studio::after {
+.menu-link-studio::after {
     content: '';
     width: 100%;
     position: absolute;
@@ -323,6 +323,7 @@ img {
     border-radius: 50%;
     background-color:#4d5ae5;
     padding: 12px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link{
     display: flex;
@@ -374,26 +375,25 @@ img {
 .portfolio-item:hover {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 6px 1px rgba(46, 47, 66, 0.08);
 }
-.cashless-payment-overlay{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:300px;
-    background-color: #404bbf;
-    overflow: auto; 
-    transform: translateY(145%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.cashless-payment-img{
+    position: relative; 
+    overflow: hidden;
 }
 .cashless-payment-text{
+    position: absolute;
+    top:0;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #ffffff;
-    transform: translate(32px,40px);
-    width: 296px;
+    color: #f4f4fd;
+    padding:40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    transform: translateY(100%);
+    width: 100%;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .portfolio-item:hover .cashless-payment-overlay{
     transform: translateY(0%);
