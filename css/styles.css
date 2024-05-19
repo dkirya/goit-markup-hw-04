@@ -113,6 +113,16 @@ img{
 .address-link:focus{
     color: #404bbf;
 }
+.menu-link::after{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
 /* ====== HERO ====== */
 .section-hero{
     position: relative;
@@ -232,6 +242,8 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 112px;
+    margin-bottom: 8px;
     padding: 32px 16px;
     border: 1px solid #8e8f99;
     border-radius: 4px;
