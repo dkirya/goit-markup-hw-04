@@ -113,7 +113,7 @@ img{
 .address-link:focus{
     color: #404bbf;
 }
-.menu-link::after{
+.menu-link-studio::after{
     content: '';
     width: 100%;
     position: absolute;
