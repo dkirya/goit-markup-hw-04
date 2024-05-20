@@ -445,6 +445,9 @@ img {
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
+.footer-logo-container{
+    margin-right: 120px;
+}
 .footer-social-media{
     display:flex;
     flex-direction:column;
