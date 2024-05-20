@@ -285,7 +285,6 @@ img {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    width:232px;
 }
 .social-list-item{
     width:40px;
@@ -311,7 +310,7 @@ img {
 }
 .social-list-link:hover,
 .social-list-link:focus{
-    stroke:404BBF;
+    background-color: #404bbf;
 }
 /* ====== PORTFOLIO ====== */
 .portfolio-title{
